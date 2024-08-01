@@ -23,7 +23,7 @@ const Countdown = () => {
       const minutes = Math.floor((secondsLeft % 3600) / 60);
       const seconds = secondsLeft % 60;
 
-      setTimeLeft(`${hours}:${minutes}:${seconds}`);
+      setTimeLeft(`${hours > 9 ? hours : `0${hours}`}:${minutes > 9 ? minutes : `0${minutes}`}:${seconds > 9 ? seconds : `0${seconds}`}`);
     };
 
     const timerInterval = setInterval(updateTimer, 1000);
@@ -32,8 +32,10 @@ const Countdown = () => {
   }, []);
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '0', fontSize: '175px' }}>
-      <h1>{timeLeft}</h1>
+    <div style={{ textAlign: 'center', marginTop: '0' }}>
+      <img src="./logo.png" alt="Primetec Academy" width="600" />
+      <h1 style={{ fontSize: '275px' }}>{timeLeft}</h1>
+      <h5 style={{ fontSize: '50px' }}>AI & TECH CAREER ORIENTATION 2024 SEMINAR</h5>
     </div>
   );
 };

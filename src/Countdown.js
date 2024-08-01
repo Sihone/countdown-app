@@ -34,8 +34,8 @@ const Countdown = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <img src="./logo.png" alt="Primetec Academy" width="40%" />
-      <h1 style={{ fontSize: '275px' }}>{timeLeft}</h1>
-      <h5 style={{ fontSize: '50px' }}>AI & TECH CAREER ORIENTATION 2024 SEMINAR</h5>
+      <h1 style={{ fontSize: '18vw' }}>{timeLeft}</h1>
+      <h5 style={{ fontSize: '3vw', textAlign: 'center' }}>AI & TECH CAREER ORIENTATION 2024 SEMINAR</h5>
     </div>
   );
 };
